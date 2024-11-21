@@ -12,4 +12,11 @@ import urlRouter from "./routes/url.routes.js"
 
 app.use('/',urlRouter)
 
+
+// Error URl
+
+app.use((req,res)=>{
+    res.status(404).json({error:' This page is not valid'})
+})
+
 export default app
